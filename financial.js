@@ -38,6 +38,7 @@ function changecost(id){
   }else if (document.getElementById("ic_chip").style.visibility == "visible") {
     ic_chip_cost = 120;
   }
+  equips_cost = 0;
   equips_cost = parseInt(ic_touch_cost) + parseInt(mag_stripe_cost) + parseInt(ic_chip_cost);
   financial();
 }

@@ -10,13 +10,11 @@ var comment = "はっはっは私があーさんだ";
 function evalucation(){
   alert("評価開始");
   //嫌悪からまとめるのは危険だぜ☆
-  alert(document.getElementById("tesuuryou").value);
 
   var shell = document.getElementById("variables");
   var radioNodeList = shell.tesuuryou_type;
   var tesutype = radioNodeList.value;
-
-  alert(tesutype);
+  anti = 0;
   anti = anti + document.getElementById("tesuuryou").value;
   if (tesutype == "standard"){
     anti = anti * 0.5;
@@ -27,7 +25,6 @@ function evalucation(){
   }
   var radioNodeList = shell.debitorcredit;
   var cardtype = radioNodeList.value;
-  alert(cardtype);
 
   if (cardtype == "debit"){
     anti = anti * 0.2;
@@ -39,9 +36,7 @@ function evalucation(){
   fans = 0;
   //そうさ。ポジティブな意見にも耳を傾ける時だ。
   var limits = document.getElementById("limit").value;
-  alert(limits);
-  fans = limits / 100;
-  alert(fans);
+  fans = limits / 10000000;
   searchcardtype();
 
   if (ic_touch_visi == "hidden"){
@@ -59,11 +54,7 @@ function evalucation(){
   }else if (ic_touch_visi == "visible") {
     fans = parseInt(fans) + 150;
   }
-  alert(fans);
   fans = parseInt(fans) - banks_cost;
-  //あーさん曰くこんな感じ。知らんが
-  alert(fans);
-  alert(anti);
   score = fans - (parseInt(anti) * 1.0);
   score = Math.round(parseInt(score) * 100) / 100;
   if (parseInt(score) >= 1300){
