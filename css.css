@@ -1,0 +1,54 @@
+
+
+#card{
+  position: relative;
+  width: 50%;
+}
+
+#equips{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+#ic_chip{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#ic_touch{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+#mag_stripe{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#banks{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+#sammachi{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sangoechigo{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+#west{
+  position: absolute;
+  top: 0;
+  left: 0;
+}

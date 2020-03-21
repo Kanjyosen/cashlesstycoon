@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>CashlessTycoon</title>
+  <script type="text/javascript" src="makecard.js"></script>
+  <script type="text/javascript" src="financial.js"></script>
+  <script type="text/javascript" src="evalucation.js"></script>
+  <script type="text/javascript" src="bgcolor.js"></script>
+  <link rel="stylesheet" href="css.css">
+  <meta charset="utf-8">
+</head>
+<body id="body2">
+  <div id="text"></div><br>
+  <div id="costs"></div><br>
+  <div id="card">
+    <img src="images/card/base.png">
+    <div id="equips">
+      <div id="ic_chip">
+        <img src="./images/card/equips/ic_chip.png">
+      </div>
+      <div id="ic_touch">
+        <img src="./images/card/equips/ic_touch.png">
+      </div>
+      <div id="mag_stripe">
+        <img src="./images/card/equips/mag_stripe.png">
+      </div>
+    </div>
+    <div id="bank">
+      <div id="sammachi">
+        <img src="./images/card/banks/sammachi.png">
+      </div>
+      <div id="sangoechigo">
+        <img src="./images/card/banks/sangoechigo.png">
+      </div>
+      <div id="west">
+        <img src="./images/card/banks/west.png">
+      </div>
+    </div>
+  </div>
+  <input type="button" value="磁気ストライプ" onClick="switching('mag_stripe');changecost('none');">
+  <input type="button" value="ICチップ" onClick="switching('ic_chip');changecost('none');">
+  <input type="button" value="ICタッチ" onClick="switching('ic_touch');changecost('none');">
+  <br>
+  <input type="button" value="三町銀行" onClick="toggle('sammachi', 'sangoechigo', 'west');changecost('sammachi')">
+  <input type="button" value="三郷越後銀行" onClick="toggle('sangoechigo', 'sammachi', 'west');changecost('sangoechigo')">
+  <input type="button" value="ウエスト銀行" onClick="toggle('west', 'sangoechigo', 'sammachi');changecost('west')">
+  <br>
+  <form id="variables">
+    <p>
+      <input type="radio" name="group1" id="tesuuryou_type" value="standard" checked>自銀同士無料・越境有料
+      <input type="radio" name="group1" id="tesuuryou_type" value="jihi">深夜有料
+      <input type="radio" name="group1" id="tesuuryou_type" value="hell">全部有料
+    </p>
+    <p>
+      <input type="radio" name="group2" id="debitorcredit" value="debit" checked>デビット機能
+      <input type="radio" name="group2" id="debitorcredit" value="credit">クレジットカード
+    </p>
+      <input type="button" value="どうだ！！！！" onClick="evalucation();">
+  </form>
+  <input type="number" placeholder="不人気度に大きく影響します" id="tesuuryou">手数料
+  <input type="number" placeholder="人気度に大きく影響します" id="limit">限度額
+  <br>
+  <input type="button" value="背景を青くする" onClick="ChangeColor('blue');">
+  <input type="button" value="背景を黒くする" onClick="ChangeColor('black');">
+  <input type="button" value="背景を緑にする" onClick="ChangeColor('green');">
+  <input type="button" value="背景を赤くする" onClick="ChangeColor('red');">
+
+  </body>
